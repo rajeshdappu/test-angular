@@ -1,0 +1,11 @@
+<input type="text" name="firstname" value="John" [(ngModel)]="myValue" (input)="hideData($event.target.value)" >
+
+<br/>
+
+
+<button (click)="submit()">Submit</button>
+
+<br/>
+
+<span [innerHtml]="dataService.getFormattedData(myValue)"[hidden]="!showFormattedData"></span>
+
